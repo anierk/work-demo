@@ -1,23 +1,24 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <el-container id="app" class="is-vertical containerMain" >
     <router-view/>
-  </div>
+  </el-container>
 </template>
-
 <script>
 export default {
-  name: 'App'
+  name: 'app',
+  components: {
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "./assets/less/common.less";
+
+  .containerMain {
+    min-width: 1190px;
+    height: 100%;
+  }
+  .el-container.is-vertical {
+    flex-direction: column;
+  }
 </style>
